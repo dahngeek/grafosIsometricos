@@ -25,6 +25,47 @@
       .mdl-chip{
         margin-left: 5px;
       }
+      /* Grafo Draw */
+      
+      body {
+        font: 13px sans-serif;
+        position: relative;
+        width: 960px;
+        height: 500px;
+      }
+
+      .node {
+        fill: #000;
+        cursor: crosshair;
+      }
+
+      .node_selected {
+        fill: #ff7f0e;
+        stroke: #ff7f0e;
+      }
+
+      .drag_line {
+        stroke: #999;
+        stroke-width: 5;
+        pointer-events: none;
+      }
+
+      .drag_line_hidden {
+        stroke: #999;
+        stroke-width: 0;
+        pointer-events: none;
+      }
+
+      .link {
+        stroke: #999;
+        stroke-width: 5;
+        cursor: crosshair;
+      }
+
+      .link_selected {
+        stroke: #ff7f0e;
+      }
+
     </style>
   </head>
   <body>
@@ -61,6 +102,8 @@
                         </div>
                         <div id="grafo1">
                             
+                        </div>
+                        <div id="chart">
                         </div>
                         <div class="mdl-card__menu">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -133,11 +176,12 @@
       </dialog>  
       <div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
+        <!-- <button class="mdl-snackbar__action" type="button"></button> -->
       </div>        
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="http://d3js.org/d3.v2.min.js"></script>    
     <script src="isomorfismo.js" charset="utf-8"></script>
   </body>
 </html>
